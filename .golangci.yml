@@ -109,7 +109,6 @@ linters:
           - cyclop
           - gocyclo
           - gosec
-          - dupl
           - goconst
           - tagliatelle
           - paralleltest
@@ -117,9 +116,13 @@ linters:
         linters:
           - err113
           - wrapcheck
-          - dupl
           - wsl_v5
           - tagliatelle
+      - path: internal/safetyprofile/.*\.go
+        linters:
+          - err113
+          - wrapcheck
+          - wsl_v5
       - path: internal/googleauth/.*\.go
         linters:
           - tagliatelle
